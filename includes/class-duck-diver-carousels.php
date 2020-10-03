@@ -121,7 +121,7 @@ class Duck_Diver_Carousels {
 		 * side of the site.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-duck-diver-carousels-public.php';
-
+        
 		$this->loader = new Duck_Diver_Carousels_Loader();
 
 	}

@@ -66,6 +66,13 @@ register_deactivation_hook( __FILE__, 'deactivate_duck_diver_carousels' );
 require plugin_dir_path( __FILE__ ) . 'includes/class-duck-diver-carousels.php';
 
 /**
+ * Require ACF Fields
+ *
+ * @since    1.0.0
+ */
+require_once plugin_dir_path(  __FILE__ ) . 'includes/duck-diver-carousels-custom-fields.php';
+
+/**
  * Begins execution of the plugin.
  *
  * Since everything within the plugin is registered via hooks,
