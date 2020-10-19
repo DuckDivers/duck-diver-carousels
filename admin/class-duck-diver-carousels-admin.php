@@ -83,10 +83,10 @@ class Duck_Diver_Carousels_Admin {
 	
 	public function add_cpt(){
 		$size_chart_labels = array(
-			'name' => _x('Carousel', 'post type general name'),
-			'singular_name' => _x('Carousel', 'post type singular name'),
-			'menu_name' => _x('Carousels', 'admin menu'),
-			'name_admin_bar' => _x('Carousels', 'add new on admin bar'),
+			'name' => _x('Carousel Anything', 'post type general name'),
+			'singular_name' => _x('Carousel Anything', 'post type singular name'),
+			'menu_name' => _x('Carousel Anything', 'admin menu'),
+			'name_admin_bar' => _x('Carousel Anything', 'add new on admin bar'),
 			'add_new' => _x('Add New', 'Carousel'),
 			'add_new_item' => __('Add New Carousel'),
 			'new_item' => __('New Carousels'),
