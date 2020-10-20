@@ -65,17 +65,6 @@ class Duck_Diver_Carousels_Admin {
 		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/duck-diver-carousels-admin.css', array(), $this->version, 'all' );
 
 	}
-
-	/**
-	 * Register the JavaScript for the admin area.
-	 *
-	 * @since    1.0.0
-	 */
-	public function enqueue_scripts() {
-
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/duck-diver-carousels-admin.js', array( 'jquery' ), $this->version, false );
-
-	}
 	
 	private function includes(){
 		include ('class-carousel-meta.php');

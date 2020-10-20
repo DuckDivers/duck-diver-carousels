@@ -61,7 +61,6 @@ class Duck_Diver_Carousels_Public {
 	 */
 	public function enqueue_styles() {
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/duck-diver-carousels-public.css', array(), $this->version, 'all' );
         wp_register_style( 'owl-carousel-css', plugin_dir_url(__FILE__) . 'css/owl.carousel.min.css');
         wp_register_style( 'owl-theme-css', plugin_dir_url(__FILE__) . 'css/owl.theme.default.min.css');
 
@@ -74,7 +73,6 @@ class Duck_Diver_Carousels_Public {
 	 */
 	public function enqueue_scripts() {
 
-		//wp_register_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/duck-diver-carousels-public.js', array( 'jquery' ), $this->version, false );
         wp_register_script ('owl-two', plugin_dir_url( __FILE__ ) . 'js/owl.carousel.min.js', array('jquery'), '2.3.4', true);
 
 	}
@@ -115,17 +113,17 @@ class Duck_Diver_Carousels_Public {
 		$transition = get_field( 'dd_carousel_transition', $postid );
 		$margin = intval(get_field( 'dd_carousel_margin', $postid ));
 		// Booleans
-        $loop = (get_field( 'dd_carousel_loop', $postid )) ? 'true' : 'false';
+    $loop = (get_field( 'dd_carousel_loop', $postid )) ? 'true' : 'false';
 		$stop = (get_field( 'dd_carousel_stop', $postid )) ? 'true' : 'false';
 		$navs = (get_field( 'dd_carousel_navs', $postid )) ? 'true' : 'false';
 		$dots = (get_field( 'dd_carousel_dots', $postid )) ? 'true' : 'false';
 
-        $items_width1 = intval(get_field('dd_owl_items_width1', $postid));
-        $items_width2 = intval(get_field('dd_owl_items_width2', $postid));
-        $items_width3 = intval(get_field('dd_owl_items_width3', $postid));
-        $items_width4 = intval(get_field('dd_owl_items_width4', $postid));
-        $items_width5 = intval(get_field('dd_owl_items_width5', $postid));
-        $items_width6 = intval(get_field('dd_owl_items_width6', $postid));
+    $items_width1 = intval(get_post_meta($postid, 'dd_carousel_anything_width1', true));
+    $items_width2 = intval(get_post_meta($postid, 'dd_carousel_anything_width2', true));
+    $items_width3 = intval(get_post_meta($postid, 'dd_carousel_anything_width3', true));
+    $items_width4 = intval(get_post_meta($postid, 'dd_carousel_anything_width4', true));
+    $items_width5 = intval(get_post_meta($postid, 'dd_carousel_anything_width5', true));
+    $items_width6 = intval(get_post_meta($postid, 'dd_carousel_anything_width6', true));
  
         
         // Include Owl Carousel

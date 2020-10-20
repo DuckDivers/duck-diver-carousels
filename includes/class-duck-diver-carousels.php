@@ -155,10 +155,9 @@ class Duck_Diver_Carousels {
 		$plugin_admin = new Duck_Diver_Carousels_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 		$this->loader->add_action( 'init', $plugin_admin, 'add_cpt');
-        $this->loader->add_filter( 'manage_dd_carousel_anything_posts_columns', $plugin_admin, 'owl_carousel_modify_columns');
-        $this->loader->add_filter( 'manage_dd_carousel_anything_posts_custom_column', $plugin_admin, 'owl_carousel_custom_column_content');
+    $this->loader->add_filter( 'manage_dd_carousel_anything_posts_columns', $plugin_admin, 'owl_carousel_modify_columns');
+    $this->loader->add_filter( 'manage_dd_carousel_anything_posts_custom_column', $plugin_admin, 'owl_carousel_custom_column_content');
 		
 	}
 

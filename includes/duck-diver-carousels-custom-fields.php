@@ -263,241 +263,145 @@ acf_add_local_field_group(array(
 	'active' => true,
 	'description' => '',
 ));
-acf_add_local_field_group(array(
-	'key' => 'group_5f6cba0a372b5',
-	'title' => 'Items Displayed',
-	'fields' => array(
-		array(
-			'key' => 'field_5f6cba15ce7f5',
-			'label' => 'Set Items Displayed',
-			'name' => '',
-			'type' => 'message',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => 'This setting determines the number of slides shown for specific css breakpoints. Each must be set.',
-			'new_lines' => 'wpautop',
-			'esc_html' => 0,
-		),
-		array(
-			'key' => 'field_5f6cc10ace7f6',
-			'label' => 'Mobile Portrait',
-			'name' => 'dd_owl_items_width1',
-			'type' => 'select',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'choices' => array(
-				1 => '1',
-				2 => '2',
-				3 => '3',
-				4 => '4',
-				5 => '5',
-				6 => '6',
-				7 => '7',
-				8 => '8',
-				9 => '9',
-				10 => '10',
-			),
-			'default_value' => 1,
-			'allow_null' => 0,
-			'multiple' => 0,
-			'ui' => 0,
-			'return_format' => 'value',
-			'ajax' => 0,
-			'placeholder' => '',
-		),
-		array(
-			'key' => 'field_5f6cc142ce7f7',
-			'label' => 'Mobile Landscape',
-			'name' => 'dd_owl_items_width2',
-			'type' => 'select',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'choices' => array(
-				1 => '1',
-				2 => '2',
-				3 => '3',
-				4 => '4',
-				5 => '5',
-				6 => '6',
-				7 => '7',
-				8 => '8',
-				9 => '9',
-				10 => '10',
-			),
-			'default_value' => 1,
-			'allow_null' => 0,
-			'multiple' => 0,
-			'ui' => 0,
-			'return_format' => 'value',
-			'ajax' => 0,
-			'placeholder' => '',
-		),
-		array(
-			'key' => 'field_5f6cc15cce7fb',
-			'label' => 'Tablet Portrait',
-			'name' => 'dd_owl_items_width3',
-			'type' => 'select',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'choices' => array(
-				1 => '1',
-				2 => '2',
-				3 => '3',
-				4 => '4',
-				5 => '5',
-				6 => '6',
-				7 => '7',
-				8 => '8',
-				9 => '9',
-				10 => '10',
-			),
-			'default_value' => 1,
-			'allow_null' => 0,
-			'multiple' => 0,
-			'ui' => 0,
-			'return_format' => 'value',
-			'ajax' => 0,
-			'placeholder' => '',
-		),
-		array(
-			'key' => 'field_5f6cc15bce7fa',
-			'label' => 'Desktop Small',
-			'name' => 'dd_owl_items_width4',
-			'type' => 'select',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'choices' => array(
-				1 => '1',
-				2 => '2',
-				3 => '3',
-				4 => '4',
-				5 => '5',
-				6 => '6',
-				7 => '7',
-				8 => '8',
-				9 => '9',
-				10 => '10',
-			),
-			'default_value' => 1,
-			'allow_null' => 0,
-			'multiple' => 0,
-			'ui' => 0,
-			'return_format' => 'value',
-			'ajax' => 0,
-			'placeholder' => '',
-		),
-		array(
-			'key' => 'field_5f6cc15ace7f9',
-			'label' => 'Desktop Large',
-			'name' => 'dd_owl_items_width5',
-			'type' => 'select',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'choices' => array(
-				1 => '1',
-				2 => '2',
-				3 => '3',
-				4 => '4',
-				5 => '5',
-				6 => '6',
-				7 => '7',
-				8 => '8',
-				9 => '9',
-				10 => '10',
-			),
-			'default_value' => 1,
-			'allow_null' => 0,
-			'multiple' => 0,
-			'ui' => 0,
-			'return_format' => 'value',
-			'ajax' => 0,
-			'placeholder' => '',
-		),
-		array(
-			'key' => 'field_5f6cc159ce7f8',
-			'label' => 'Desktop X-Large',
-			'name' => 'dd_owl_items_width6',
-			'type' => 'select',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'choices' => array(
-				1 => '1',
-				2 => '2',
-				3 => '3',
-				4 => '4',
-				5 => '5',
-				6 => '6',
-				7 => '7',
-				8 => '8',
-				9 => '9',
-				10 => '10',
-			),
-			'default_value' => 1,
-			'allow_null' => 0,
-			'multiple' => 0,
-			'ui' => 0,
-			'return_format' => 'value',
-			'ajax' => 0,
-			'placeholder' => '',
-		),
-	),
-	'location' => array(
-		array(
-			array(
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'dd_carousel_anything',
-			),
-		),
-	),
-	'menu_order' => 0,
-	'position' => 'side',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
-	'active' => true,
-	'description' => '',
-));
+
+class DD_SLIDE_ANYTHING_Meta {
+
+	public function __construct() {
+
+		if ( is_admin() ) {
+			add_action( 'load-post.php',     array( $this, 'init_metabox' ) );
+			add_action( 'load-post-new.php', array( $this, 'init_metabox' ) );
+		}
+
+	}
+
+	public function init_metabox() {
+
+		add_action( 'add_meta_boxes',        array( $this, 'add_metabox' )         );
+		add_action( 'save_post',             array( $this, 'save_metabox' ), 10, 2 );
+
+	}
+
+	public function add_metabox() {
+
+  add_meta_box(
+    'owl-items-displayed',
+    __('Items Displayed', 'owl-carousel-2'),
+    array($this, 'owl_carousel_items_content'),
+    'dd_carousel_anything',
+    'side',
+    'default');
+	}
+
+  public function owl_carousel_items_content($post){
+        $items_width1 = intval(get_post_meta($post->ID, 'dd_carousel_anything_width1', true));
+        $items_width2 = intval(get_post_meta($post->ID, 'dd_carousel_anything_width2', true));
+        $items_width3 = intval(get_post_meta($post->ID, 'dd_carousel_anything_width3', true));
+        $items_width4 = intval(get_post_meta($post->ID, 'dd_carousel_anything_width4', true));
+        $items_width5 = intval(get_post_meta($post->ID, 'dd_carousel_anything_width5', true));
+        $items_width6 = intval(get_post_meta($post->ID, 'dd_carousel_anything_width6', true));
+        if ($items_width1 == 0) { $items_width1 = 1; }
+        if ($items_width2 == 0) { $items_width2 = 1; }
+        if ($items_width3 == 0) { $items_width3 = 1; }
+        if ($items_width4 == 0) { $items_width4 = 1; }
+        if ($items_width5 == 0) { $items_width5 = 1; }
+        if ($items_width6 == 0) { $items_width6 = 1; }
+
+        echo "<div id='items_displayed_metabox'>\n";
+        echo '<p class="description">'.__('This setting determines the number of slides shown for specific css breakpoints.  Each must be set.', 'owl-carousel-2').'</p>';
+        echo "<h4>Browser/Device Width:</h4>\n";
+        // items for browser width category 1
+        echo "<div class=\"items-displayed-div\"><em class='dd_owl_tooltip' href='#' title='Up to 479 pixels'></em><span>Mobile Portrait</span><select name='dd_carousel_anything_width1'>";
+        for ($i = 1; $i <= 12; $i++) {
+            if ($i == $items_width1) {
+                echo "<option value='".esc_attr($i)."' selected>".esc_html($i)."</option>";
+            } else {
+                echo "<option value='".esc_attr($i)."'>".esc_html($i)."</option>";
+            }
+        }
+        echo "</select></div>\n";
+        // items for browser width category 2
+        echo "<div class=\"items-displayed-div\"><em class='dd_owl_tooltip' href='#' title='480 to 767 pixels'></em><span>Mobile Landscape</span><select name='dd_carousel_anything_width2'>";
+        for ($i = 1; $i <= 12; $i++) {
+            if ($i == $items_width2) {
+                echo "<option value='".esc_attr($i)."' selected>".esc_html($i)."</option>";
+            } else {
+                echo "<option value='".esc_attr($i)."'>".esc_html($i)."</option>";
+            }
+        }
+        echo "</select></div>\n";
+        // items for browser width category 3
+        echo "<div class=\"items-displayed-div\"><em class='dd_owl_tooltip' href='#' title='768 to 979 pixels'></em><span>Tablet Portrait</span><select name='dd_carousel_anything_width3'>";
+        for ($i = 1; $i <= 12; $i++) {
+            if ($i == $items_width3) {
+                echo "<option value='".esc_attr($i)."' selected>".esc_html($i)."</option>";
+            } else {
+                echo "<option value='".esc_attr($i)."'>".esc_html($i)."</option>";
+            }
+        }
+        echo "</select></div>\n";
+        // items for browser width category 4
+        echo "<div class=\"items-displayed-div\"><em class='dd_owl_tooltip' href='#' title='980 to 1199 pixels'></em><span>Desktop Small</span><select name='dd_carousel_anything_width4'>";
+        for ($i = 1; $i <= 12; $i++) {
+            if ($i == $items_width4) {
+                echo "<option value='".esc_attr($i)."' selected>".esc_html($i)."</option>";
+            } else {
+                echo "<option value='".esc_attr($i)."'>".esc_html($i)."</option>";
+            }
+        }
+        echo "</select></div>\n";
+        // items for browser width category 5
+        echo "<div class=\"items-displayed-div\"><em class='dd_owl_tooltip' href='#' title='1200 to 1499 pixels'></em><span>Desktop Large</span><select name='dd_carousel_anything_width5'>";
+        for ($i = 1; $i <= 12; $i++) {
+            if ($i == $items_width5) {
+                echo "<option value='".esc_attr($i)."' selected>".esc_html($i)."</option>";
+            } else {
+                echo "<option value='".esc_attr($i)."'>".esc_html($i)."</option>";
+            }
+        }
+        echo "</select></div>\n";
+        // items for browser width category 6
+        echo "<div class=\"items-displayed-div\"><em class='dd_owl_tooltip' href='#' title='Over 1500 pixels'></em><span>Desktop X-Large</span><select name='dd_carousel_anything_width6'>";
+        for ($i = 1; $i <= 12; $i++) {
+            if ($i == $items_width6) {
+                echo "<option value='".esc_attr($i)."' selected>".esc_html($i)."</option>";
+            } else {
+                echo "<option value='".esc_attr($i)."'>".esc_html($i)."</option>";
+            }
+        }
+        echo "</select></div>\n";
+
+
+        echo "</div>\n";
+    }
+
+    public function owl_carousel_shortcode_link($post){
+        $post_status = get_post_status($post->ID);
+        $allow_shortcodes = (metadata_exists('post', $post->ID, 'dd_owl_shortcodes')) ? get_post_meta($post->ID, 'dd_owl_shortcodes', true) : '1';
+        $shortcode = '[dd-owl-carousel id="'.$post->ID.'"]';
+        echo "<div id='dd_owl_shortcode'>".esc_html($shortcode)."</div>\n";
+        echo "<div id='dd_shortcode_copy' class='button button-primary'>Copy to Clipboard</div>\n";
+    }
+
+	public function save_metabox( $post_id, $post ) {
+
+    $dd_owl_new_items_width1 = isset( $_POST['dd_carousel_anything_width1']) ? abs(intval($_POST['dd_carousel_anything_width1'])) : '';
+    $dd_owl_new_items_width2 = isset( $_POST['dd_carousel_anything_width2']) ? abs(intval($_POST['dd_carousel_anything_width2'])) : '';
+    $dd_owl_new_items_width3 = isset( $_POST['dd_carousel_anything_width3']) ? abs(intval($_POST['dd_carousel_anything_width3'])) : '';
+    $dd_owl_new_items_width4 = isset( $_POST['dd_carousel_anything_width4']) ? abs(intval($_POST['dd_carousel_anything_width4'])) : '';
+    $dd_owl_new_items_width5 = isset( $_POST['dd_carousel_anything_width5']) ? abs(intval($_POST['dd_carousel_anything_width5'])) : '';
+    $dd_owl_new_items_width6 = isset( $_POST['dd_carousel_anything_width6']) ? abs(intval($_POST['dd_carousel_anything_width6'])) : '';
+
+    // Update Side Meta Fields
+		update_post_meta( $post_id, 'dd_carousel_anything_width1', $dd_owl_new_items_width1 );
+		update_post_meta( $post_id, 'dd_carousel_anything_width2', $dd_owl_new_items_width2 );
+		update_post_meta( $post_id, 'dd_carousel_anything_width3', $dd_owl_new_items_width3 );
+		update_post_meta( $post_id, 'dd_carousel_anything_width4', $dd_owl_new_items_width4 );
+		update_post_meta( $post_id, 'dd_carousel_anything_width5', $dd_owl_new_items_width5 );
+		update_post_meta( $post_id, 'dd_carousel_anything_width6', $dd_owl_new_items_width6 );
+
+	}
+
+}
+
+new DD_SLIDE_ANYTHING_Meta;
