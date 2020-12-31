@@ -22,110 +22,109 @@
  */
 class Duck_Diver_Carousels_Public {
 
-	/**
-	 * The ID of this plugin.
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 * @var      string    $plugin_name    The ID of this plugin.
-	 */
-	private $plugin_name;
+    /**
+     * The ID of this plugin.
+     *
+     * @since    1.0.0
+     * @access   private
+     * @var      string $plugin_name The ID of this plugin.
+     */
+    private $plugin_name;
 
-	/**
-	 * The version of this plugin.
-	 *
-	 * @since    1.0.0
-	 * @access   private
-	 * @var      string    $version    The current version of this plugin.
-	 */
-	private $version;
+    /**
+     * The version of this plugin.
+     *
+     * @since    1.0.0
+     * @access   private
+     * @var      string $version The current version of this plugin.
+     */
+    private $version;
 
-	/**
-	 * Initialize the class and set its properties.
-	 *
-	 * @since    1.0.0
-	 * @param      string    $plugin_name       The name of the plugin.
-	 * @param      string    $version    The version of this plugin.
-	 */
-	public function __construct( $plugin_name, $version ) {
+    /**
+     * Initialize the class and set its properties.
+     *
+     * @param string $plugin_name The name of the plugin.
+     * @param string $version The version of this plugin.
+     * @since    1.0.0
+     */
+    public function __construct($plugin_name, $version) {
 
-		$this->plugin_name = $plugin_name;
-		$this->version = $version;
+        $this->plugin_name = $plugin_name;
+        $this->version = $version;
 
     }
 
-	/**
-	 * Register the stylesheets for the public-facing side of the site.
-	 *
-	 * @since    1.0.0
-	 */
-	public function enqueue_styles() {
+    /**
+     * Register the stylesheets for the public-facing side of the site.
+     *
+     * @since    1.0.0
+     */
+    public function enqueue_styles() {
 
-        wp_register_style( 'owl-carousel-css', plugin_dir_url(__FILE__) . 'css/owl.carousel.min.css');
-        wp_register_style( 'owl-theme-css', plugin_dir_url(__FILE__) . 'css/owl.theme.default.min.css');
+        wp_register_style('owl-carousel-css', plugin_dir_url(__FILE__) . 'css/owl.carousel.min.css');
+        wp_register_style('owl-theme-css', plugin_dir_url(__FILE__) . 'css/owl.theme.default.min.css');
 
-	}
+    }
 
-	/**
-	 * Register the JavaScript for the public-facing side of the site.
-	 *
-	 * @since    1.0.0
-	 */
-	public function enqueue_scripts() {
+    /**
+     * Register the JavaScript for the public-facing side of the site.
+     *
+     * @since    1.0.0
+     */
+    public function enqueue_scripts() {
 
-        wp_register_script ('owl-two', plugin_dir_url( __FILE__ ) . 'js/owl.carousel.min.js', array('jquery'), '2.3.4', true);
+        wp_register_script('owl-two', plugin_dir_url(__FILE__) . 'js/owl.carousel.min.js', array('jquery'), '2.3.4', true);
 
-	}
+    }
 
 
-    public function owl_carousel_shortcode($atts){
-        
+    public function owl_carousel_shortcode($atts) {
+
         wp_enqueue_script('owl-two');
         wp_enqueue_style('owl-carousel-css');
         wp_enqueue_style('owl-theme-css');
-        
+
         $atts = shortcode_atts(
-        array(
-            'id'    => '',
-        ), $atts, 'dd-carousel-anything' );
+            array(
+                'id' => '',
+            ), $atts, 'dd-carousel-anything');
 
         $post = get_post($atts['id']);
 
         $postid = $post->ID;
-        
+
         if (have_rows('carousel_content', $postid)):
-            
-            $output = '<div class="owl-wrapper"><div id="carousel-'.$atts['id'].'" class="owl-carousel owl-theme">';
-            
-            while(have_rows('carousel_content', $postid)): the_row();
-                $class = (get_sub_field('slide_wrapper_extra_css')) ? ' '.get_sub_field('slide_wrapper_extra_css') : '';
-                $output .= '<div class="item"><div class="item-inner'.$class.'">';
+
+            $output = '<div class="owl-wrapper"><div id="carousel-' . $atts['id'] . '" class="owl-carousel owl-theme">';
+
+            while (have_rows('carousel_content', $postid)): the_row();
+                $class = (get_sub_field('slide_wrapper_extra_css')) ? ' ' . get_sub_field('slide_wrapper_extra_css') : '';
+                $output .= '<div class="item"><div class="item-inner' . $class . '">';
                 $output .= apply_filters('the_content', get_sub_field('slide_content'));
                 $output .= '</div></div>';
             endwhile;
-        
+
             $output .= '</div></div>'; // End of Owl Carousel
-        
+
         endif;
 
         // Get Owl Meta for Carousel Init
-		$duration = intval(get_field( 'dd_carousel_duration', $postid ) . '000');
-		$transition = get_field( 'dd_carousel_transition', $postid );
-		$margin = intval(get_field( 'dd_carousel_margin', $postid ));
-		// Booleans
-    $loop = (get_field( 'dd_carousel_loop', $postid )) ? 'true' : 'false';
-		$stop = (get_field( 'dd_carousel_stop', $postid )) ? 'true' : 'false';
-		$navs = (get_field( 'dd_carousel_navs', $postid )) ? 'true' : 'false';
-		$dots = (get_field( 'dd_carousel_dots', $postid )) ? 'true' : 'false';
+        $duration = intval(get_field('dd_carousel_duration', $postid) . '000');
+        $transition = get_field('dd_carousel_transition', $postid);
+        $margin = intval(get_field('dd_carousel_margin', $postid));
+        // Booleans
+        $loop = (get_field('dd_carousel_loop', $postid)) ? 'true' : 'false';
+        $stop = (get_field('dd_carousel_stop', $postid)) ? 'true' : 'false';
+        $navs = (get_field('dd_carousel_navs', $postid)) ? 'true' : 'false';
+        $dots = (get_field('dd_carousel_dots', $postid)) ? 'true' : 'false';
 
-    $items_width1 = intval(get_post_meta($postid, 'dd_carousel_anything_width1', true));
-    $items_width2 = intval(get_post_meta($postid, 'dd_carousel_anything_width2', true));
-    $items_width3 = intval(get_post_meta($postid, 'dd_carousel_anything_width3', true));
-    $items_width4 = intval(get_post_meta($postid, 'dd_carousel_anything_width4', true));
-    $items_width5 = intval(get_post_meta($postid, 'dd_carousel_anything_width5', true));
-    $items_width6 = intval(get_post_meta($postid, 'dd_carousel_anything_width6', true));
- 
-        
+        $items_width1 = intval(get_post_meta($postid, 'dd_owl_items_width1', true));
+        $items_width2 = intval(get_post_meta($postid, 'dd_owl_items_width2', true));
+        $items_width3 = intval(get_post_meta($postid, 'dd_owl_items_width3', true));
+        $items_width4 = intval(get_post_meta($postid, 'dd_owl_items_width4', true));
+        $items_width5 = intval(get_post_meta($postid, 'dd_owl_items_width5', true));
+        $items_width6 = intval(get_post_meta($postid, 'dd_owl_items_width6', true));
+
         // Include Owl Carousel
         $output .= "
        <script type='text/javascript' async>
@@ -157,11 +156,11 @@ class Duck_Diver_Carousels_Public {
                     1200:{items:{$items_width5}},
                     1500:{items:{$items_width6}},
                     }
-                });
+                })
 
             });
         </script>";
-        
+
         return $output;
     }
 
