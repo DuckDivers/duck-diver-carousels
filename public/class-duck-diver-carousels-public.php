@@ -118,49 +118,49 @@ class Duck_Diver_Carousels_Public {
         $navs = (get_field('dd_carousel_navs', $postid)) ? 'true' : 'false';
         $dots = (get_field('dd_carousel_dots', $postid)) ? 'true' : 'false';
 
-        $items_width1 = intval(get_post_meta($postid, 'dd_owl_items_width1', true));
-        $items_width2 = intval(get_post_meta($postid, 'dd_owl_items_width2', true));
-        $items_width3 = intval(get_post_meta($postid, 'dd_owl_items_width3', true));
-        $items_width4 = intval(get_post_meta($postid, 'dd_owl_items_width4', true));
-        $items_width5 = intval(get_post_meta($postid, 'dd_owl_items_width5', true));
-        $items_width6 = intval(get_post_meta($postid, 'dd_owl_items_width6', true));
+        $items_width1 = intval(get_post_meta($postid, 'dd_carousel_anything_width1', true));
+        $items_width2 = intval(get_post_meta($postid, 'dd_carousel_anything_width1', true));
+        $items_width3 = intval(get_post_meta($postid, 'dd_carousel_anything_width1', true));
+        $items_width4 = intval(get_post_meta($postid, 'dd_carousel_anything_width1', true));
+        $items_width5 = intval(get_post_meta($postid, 'dd_carousel_anything_width1', true));
+        $items_width6 = intval(get_post_meta($postid, 'dd_carousel_anything_width1', true));
 
         // Include Owl Carousel
-        $output .= "
+        ob_start(); ?>
        <script type='text/javascript' async>
            jQuery(document).ready(function($){
-            $('#carousel-{$atts['id']}').owlCarousel({
-                loop:{$loop},
+            $('#carousel-<?php echo $atts['id'];?>').owlCarousel({
+                loop:<?php echo $loop;?>,
                 autoplay : true,
-                autoplayTimeout : {$duration},
-                smartSpeed : {$transition},
-                fluidSpeed : {$transition},
-                autoplaySpeed : {$transition},
-                navSpeed : {$transition},
-                dotsSpeed : {$transition},
-                margin: {$margin},
-                autoplayHoverPause : {$stop},
-                nav : {$navs},
+                autoplayTimeout : <?php echo $duration;?>,
+                smartSpeed : <?php echo $transition;?>,
+                fluidSpeed : <?php echo $transition;?>,
+                autoplaySpeed : <?php echo $transition;?>,
+                navSpeed : <?php echo $transition;?>,
+                dotsSpeed : <?php echo $transition;?>,
+                margin: <?php echo $margin;?>,
+                autoplayHoverPause : <?php echo $stop;?>,
+                nav : <?php echo $navs;?>,
                 navText : ['',''],
-                dots : {$dots},
+                dots : <?php echo $dots;?>,
                 responsiveRefreshRate : 200,
                 slideBy : 1,
                 mergeFit : true,
                 mouseDrag : true,
                 touchDrag : true,
                 responsive:{
-                    0:{items:{$items_width1}},
-                    480:{items:{$items_width2}},
-                    768:{items:{$items_width3}},
-                    991:{items:{$items_width4}},
-                    1200:{items:{$items_width5}},
-                    1500:{items:{$items_width6}},
-                    }
-                })
-
+                    0:{items:<?php echo $items_width1;?>},
+                    480:{items:<?php echo $items_width2;?>},
+                    768:{items:<?php echo $items_width3;?>},
+                    991:{items:<?php echo $items_width4;?>},
+                    1200:{items:<?php echo $items_width5;?>},
+                    1500:{items:<?php echo $items_width6;?>},
+                    },
+                <?php if (get_field('transition_type', $postid) === 'fade') echo "animateOut: 'fadeOut',"; ?>
+                });
             });
-        </script>";
-
+        </script>
+        <?php $output .= ob_get_clean();
         return $output;
     }
 
