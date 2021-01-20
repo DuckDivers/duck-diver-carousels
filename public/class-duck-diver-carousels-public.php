@@ -117,6 +117,7 @@ class Duck_Diver_Carousels_Public {
         $stop = (get_field('dd_carousel_stop', $postid)) ? 'true' : 'false';
         $navs = (get_field('dd_carousel_navs', $postid)) ? 'true' : 'false';
         $dots = (get_field('dd_carousel_dots', $postid)) ? 'true' : 'false';
+        $mouse_drag = (get_field('mouse_drag', $postid)) ? 'true' : 'false';
 
         $items_width1 = intval(get_post_meta($postid, 'dd_carousel_anything_width1', true));
         $items_width2 = intval(get_post_meta($postid, 'dd_carousel_anything_width1', true));
@@ -124,7 +125,6 @@ class Duck_Diver_Carousels_Public {
         $items_width4 = intval(get_post_meta($postid, 'dd_carousel_anything_width1', true));
         $items_width5 = intval(get_post_meta($postid, 'dd_carousel_anything_width1', true));
         $items_width6 = intval(get_post_meta($postid, 'dd_carousel_anything_width1', true));
-
         // Include Owl Carousel
         ob_start(); ?>
        <script type='text/javascript' async>
@@ -146,8 +146,8 @@ class Duck_Diver_Carousels_Public {
                 responsiveRefreshRate : 200,
                 slideBy : 1,
                 mergeFit : true,
-                mouseDrag : true,
-                touchDrag : true,
+                mouseDrag : <?php echo $mouse_drag;?>,
+                touchDrag : <?php echo $mouse_drag;?>,
                 responsive:{
                     0:{items:<?php echo $items_width1;?>},
                     480:{items:<?php echo $items_width2;?>},

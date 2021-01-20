@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a82d42e8-8ad5-4dcb-806b-62e66437a260" name="Zeagle" url="http://dev.zeagle.com">
+        <fileTransfer rootFolder="/home3/duckdiver/vp.duckdiver.net/wp-content/plugins/duck-diver-carousels" accessType="SFTP" host="34.198.44.108" port="22" sshConfigId="a21d11fd-110c-4f91-935d-d8ac03d09b34" sshConfig="root@34.198.44.108:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
