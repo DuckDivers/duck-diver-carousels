@@ -128,7 +128,7 @@ class Duck_Diver_Carousels_Public {
         // Include Owl Carousel
         ob_start(); ?>
        <script type='text/javascript' async>
-           jQuery(document).ready(function($){
+           jQuery(function($){
             $('#carousel-<?php echo $atts['id'];?>').owlCarousel({
                 loop:<?php echo $loop;?>,
                 autoplay : true,
